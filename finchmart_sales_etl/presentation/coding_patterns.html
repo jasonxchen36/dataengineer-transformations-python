@@ -3,162 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Patterns Part 1</title>
+    <title>Coding Patterns Ensure Maintainability</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .slide-container {
             width: 1280px;
             min-height: 720px;
-            background: #FFFFFF;
-            padding: 50px 60px;
-            position: relative;
+            background: #F2F9FC;
+            margin: 0 auto;
+            padding: 0;
         }
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        
+        .header-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #12377A 0%, #3D8BC1 50%, #6BAFD3 100%);
             width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(160, 255, 31, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(160, 255, 31, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
         }
-        .content {
-            position: relative;
-            z-index: 2;
+        
+        .content-area {
+            padding: 40px 80px;
         }
-        .title {
-            font-size: 40px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 35px;
-            border-left: 8px solid #6B2D9E;
-            padding-left: 20px;
+        
+        .slide-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
-        .patterns-grid {
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 12px;
+            margin-top: 20px;
+        }
+        
+        .content-text {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3D8BC1;
+        }
+        
+        .metric-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 24px;
         }
-        .pattern-block {
-            background: #F8F8F8;
-            padding: 30px;
-            min-height: 240px;
-            display: flex;
-            flex-direction: column;
+        
+        .metric-card {
+            background: white;
+            padding: 24px;
+            border-left: 4px solid #6BAFD3;
         }
-        .pattern-header {
-            display: flex;
-            align-items: center;
+        
+        .metric-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: #12377A;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #3D8BC1;
+            margin-bottom: 8px;
+        }
+        
+        .metric-desc {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.5;
+        }
+        
+        .content-list {
+            list-style: none;
+            padding-left: 0;
             margin-bottom: 20px;
         }
-        .pattern-number {
-            width: 55px;
-            height: 55px;
-            background: #A0FF1F;
-            color: #1A1A2E;
-            font-size: 28px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 18px;
-        }
-        .pattern-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1A1A2E;
-            flex: 1;
-        }
-        .pattern-description {
-            font-size: 18px;
-            color: #2D2D44;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-        .pattern-benefit {
-            background: #1A1A2E;
-            color: #A0FF1F;
-            padding: 12px 18px;
+        
+        .list-item {
+            font-family: 'SF Pro', sans-serif;
             font-size: 16px;
-            font-weight: 600;
-            margin-top: auto;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
         }
-        .pattern-block:nth-child(1) .pattern-number {
-            background: #6B2D9E;
-            color: white;
-        }
-        .pattern-block:nth-child(3) .pattern-number {
-            background: #6B2D9E;
-            color: white;
-        }
-        .full-width-pattern {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, #F8F8F8 0%, #FFFFFF 100%);
-        }
-        .continuation-note {
-            background: linear-gradient(90deg, #6B2D9E 0%, #A0FF1F 100%);
-            color: white;
-            padding: 18px 30px;
-            margin-top: 30px;
-            text-align: center;
-            font-size: 17px;
-            font-weight: 600;
+        
+        .list-item:before {
+            content: "•";
+            color: #3D8BC1;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div class="slide-container">
-        <div class="grid-overlay"></div>
-        <div class="content">
-            <h1 class="title">Coding Patterns Ensure Maintainability (Part 1)</h1>
+        <div class="header-bar"></div>
+        <div class="content-area">
+            <h1 class="slide-title">Coding Patterns Ensure Maintainability</h1>
             
-            <div class="patterns-grid">
-                <div class="pattern-block">
-                    <div class="pattern-header">
-                        <div class="pattern-number">1</div>
-                        <div class="pattern-title">Modularity</div>
-                    </div>
-                    <div class="pattern-description">
-                        Separate functions for bronze_layer_ingestion(), silver_layer_transformation(), and gold_layer_aggregation() provide clear separation of concerns. Each layer is independently testable and reusable across different pipelines.
-                    </div>
-                    <div class="pattern-benefit">✓ Easy testing, debugging, and maintenance</div>
-                </div>
-                
-                <div class="pattern-block">
-                    <div class="pattern-header">
-                        <div class="pattern-number">2</div>
-                        <div class="pattern-title">Explicit Schema</div>
-                    </div>
-                    <div class="pattern-description">
-                        StructType schemas enforce data types at ingestion (StringType, IntegerType, TimestampType). Type safety catches malformed data before processing, preventing runtime errors downstream.
-                    </div>
-                    <div class="pattern-benefit">✓ Early error detection and self-documenting code</div>
-                </div>
-                
-                <div class="pattern-block full-width-pattern">
-                    <div class="pattern-header">
-                        <div class="pattern-number">3</div>
-                        <div class="pattern-title">Data Lineage Tracking</div>
-                    </div>
-                    <div class="pattern-description">
-                        ingestion_timestamp and source_file columns added at Bronze layer enable tracing any record back to original CSV file and ingestion time. Critical for compliance, debugging, and incremental processing.
-                    </div>
-                    <div class="pattern-benefit">✓ Full traceability and audit trail</div>
-                </div>
+            <div class="info-box">
+                <div class="section-title">1. Modularity: Separation of Concerns</div>
+                <div class="content-text">Separate functions for bronze_layer_ingestion(), silver_layer_transformation(), and gold_layer_aggregation() provide clear boundaries, independent testability, and reusable components across projects.</div>
             </div>
             
-            <div class="continuation-note">
-                Continued: Defensive Programming and Window Functions for Deduplication →
+            <div class="info-box">
+                <div class="section-title">2. Explicit Schema Definition</div>
+                <div class="content-text">StructType schemas enforce data types at ingestion (StringType, IntegerType, TimestampType). Provides type safety, early error detection, and self-documenting code that serves as data contracts.</div>
             </div>
+            
+            <div class="info-box">
+                <div class="section-title">3. Data Lineage Tracking</div>
+                <div class="content-text">ingestion_timestamp and source_file columns added at Bronze layer enable full traceability back to original CSV file and ingestion time. Critical for compliance audits and debugging data quality issues.</div>
+            </div>
+            
         </div>
     </div>
 </body>

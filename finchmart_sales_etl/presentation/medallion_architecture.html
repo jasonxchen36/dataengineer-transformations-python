@@ -3,216 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medallion Architecture</title>
+    <title>Medallion Architecture Drives Data Quality</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .slide-container {
             width: 1280px;
             min-height: 720px;
-            background: #FFFFFF;
-            padding: 40px 60px;
-            position: relative;
-        }
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(107, 45, 158, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(107, 45, 158, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
-        }
-        .content {
-            position: relative;
-            z-index: 2;
-        }
-        .title {
-            font-size: 40px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 10px;
-            border-bottom: 6px solid #6B2D9E;
-            padding-bottom: 10px;
-        }
-        .subtitle {
-            font-size: 20px;
-            color: #2D2D44;
-            margin-bottom: 30px;
-        }
-        .architecture-flow {
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            gap: 25px;
-            margin-bottom: 20px;
-        }
-        .layer-block {
-            flex: 1;
-            background: #F8F8F8;
-            padding: 25px 20px;
-            position: relative;
-            min-height: 340px;
+            background: #F2F9FC;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
+            padding: 40px;
         }
-        .layer-block:after {
-            content: "→";
-            position: absolute;
-            right: -25px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 48px;
-            color: #A0FF1F;
-            font-weight: bold;
-            z-index: 3;
-        }
-        .layer-block:last-child:after {
-            display: none;
-        }
-        .layer-header {
-            margin-bottom: 15px;
-        }
-        .layer-name {
-            font-size: 28px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-        .layer-purpose {
-            font-size: 16px;
-            color: #2D2D44;
-            font-style: italic;
-        }
-        .layer-metric {
-            background: #1A1A2E;
-            color: #A0FF1F;
-            padding: 12px 20px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .metric-number {
+        
+        .slide-title {
+            font-family: 'Inter', sans-serif;
+            color: #12377A;
             font-size: 36px;
-            font-weight: bold;
-            line-height: 1;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
-        .metric-label {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 4px;
+        
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            flex: 1;
+            justify-content: space-evenly;
         }
-        .layer-content {
+        
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .layer-stat {
+            background: rgba(18, 55, 122, 0.05);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .stat-title {
+            font-family: 'SF Pro', sans-serif;
+            color: #12377A;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .stat-value {
+            font-family: 'SF Pro', sans-serif;
+            color: #12377A;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        
+        .stat-description {
+            font-family: 'SF Pro', sans-serif;
+            color: #858481;
             font-size: 16px;
-            color: #2D2D44;
-            line-height: 1.5;
-            flex-grow: 1;
+            line-height: 1.3;
         }
-        .transform-item {
-            margin-bottom: 8px;
-            padding-left: 20px;
+        
+        .architecture-diagram {
+            width: 480px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .layer-box {
+            width: 100%;
+            height: 110px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 4px 16px rgba(18, 55, 122, 0.1);
             position: relative;
         }
-        .transform-item:before {
-            content: "●";
-            position: absolute;
-            left: 0;
-            color: #6B2D9E;
-            font-size: 12px;
-            top: 4px;
-        }
-        .bronze-accent {
-            border-top: 8px solid #6B2D9E;
-        }
-        .silver-accent {
-            border-top: 8px solid #A0FF1F;
-        }
-        .gold-accent {
-            border-top: 8px solid #1A1A2E;
-        }
-        .summary-bar {
-            background: linear-gradient(90deg, #6B2D9E 0%, #A0FF1F 50%, #1A1A2E 100%);
-            padding: 15px 30px;
+        
+        .bronze-layer {
+            background: linear-gradient(135deg, #CD7F32 0%, #B87333 100%);
             color: white;
-            font-size: 18px;
-            font-weight: 600;
+        }
+        
+        .silver-layer {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%);
+            color: #333333;
+        }
+        
+        .gold-layer {
+            background: linear-gradient(135deg, #FFD700 0%, #FFC700 100%);
+            color: #333333;
+        }
+        
+        .layer-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .layer-detail {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 20px solid #3D8BC1;
+            margin: 8px 0;
+        }
+        
+        .data-source {
+            font-family: 'SF Pro', sans-serif;
+            color: #858481;
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 8px;
             text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="slide-container">
-        <div class="grid-overlay"></div>
-        <div class="content">
-            <h1 class="title">Medallion Architecture Drives Data Quality</h1>
-            <p class="subtitle">Progressive data refinement from raw ingestion to business-ready analytics</p>
-            
-            <div class="architecture-flow">
-                <div class="layer-block bronze-accent">
-                    <div class="layer-header">
-                        <div class="layer-name">Bronze</div>
-                        <div class="layer-purpose">Immutable Raw Archive</div>
-                    </div>
-                    <div class="layer-metric">
-                        <div class="metric-number">600</div>
-                        <div class="metric-label">Records</div>
-                    </div>
-                    <div class="layer-content">
-                        <div class="transform-item">Ingests 3 CSV files with zero transformation</div>
-                        <div class="transform-item">Adds metadata: ingestion_timestamp, source_file</div>
-                        <div class="transform-item">Parquet storage for efficient compression</div>
-                        <div class="transform-item">Serves as authoritative source for recovery</div>
-                        <div class="transform-item">Preserves raw data for compliance</div>
+        <h1 class="slide-title">Medallion Architecture Drives Data Quality</h1>
+        
+        <div class="content-container">
+            <div class="left-column">
+                <div class="layer-stat">
+                    <div class="stat-title">Bronze Layer: Raw Ingestion</div>
+                    <div class="stat-value">600 Records</div>
+                    <div class="stat-description">
+                        Raw data ingested from CSV files with full lineage tracking. Includes ingestion_timestamp 
+                        and source_file metadata for complete traceability and audit compliance.
                     </div>
                 </div>
                 
-                <div class="layer-block silver-accent">
-                    <div class="layer-header">
-                        <div class="layer-name">Silver</div>
-                        <div class="layer-purpose">Cleansed and Enriched</div>
-                    </div>
-                    <div class="layer-metric">
-                        <div class="metric-number">950</div>
-                        <div class="metric-label">Records</div>
-                    </div>
-                    <div class="layer-content">
-                        <div class="transform-item">Timestamp validation converts strings to datetime</div>
-                        <div class="transform-item">Window function deduplication by transaction_id</div>
-                        <div class="transform-item">Null handling with intelligent defaults</div>
-                        <div class="transform-item">Product enrichment via left join (565 products)</div>
-                        <div class="transform-item">Data quality checks ensure integrity</div>
+                <div class="layer-stat">
+                    <div class="stat-title">Silver Layer: Cleansed & Enriched</div>
+                    <div class="stat-value">950 Records</div>
+                    <div class="stat-description">
+                        Data validated, deduplicated, and enriched with product reference data. Schema enforcement, 
+                        null handling, and range validation ensure 100% data quality before analytics.
                     </div>
                 </div>
                 
-                <div class="layer-block gold-accent">
-                    <div class="layer-header">
-                        <div class="layer-name">Gold</div>
-                        <div class="layer-purpose">Business Aggregations</div>
+                <div class="layer-stat">
+                    <div class="stat-title">Gold Layer: Analytics-Ready</div>
+                    <div class="stat-value">4 Aggregated Tables</div>
+                    <div class="stat-description">
+                        Business-level aggregations optimized for Power BI: daily sales trends, store performance, 
+                        top products, and transaction details with sub-second query response times.
                     </div>
-                    <div class="layer-metric">
-                        <div class="metric-number">4</div>
-                        <div class="metric-label">Tables</div>
-                    </div>
-                    <div class="layer-content">
-                        <div class="transform-item">Daily sales metrics aggregated by date</div>
-                        <div class="transform-item">Store performance across 6 locations</div>
-                        <div class="transform-item">Top 5 products by revenue ranking</div>
-                        <div class="transform-item">Customer spending behavior analysis</div>
-                        <div class="transform-item">Partitioned by date, optimized for Power BI</div>
+                    <div class="data-source">
+                        Architecture follows Databricks medallion pattern for enterprise data lakes
                     </div>
                 </div>
             </div>
             
-            <div class="summary-bar">
-                Medallion architecture provides clear data lineage, progressive quality improvement, and reusable Silver layer for multiple downstream use cases
+            <div class="right-column">
+                <div class="architecture-diagram">
+                    <div class="layer-box bronze-layer">
+                        <div class="layer-name">🥉 BRONZE</div>
+                        <div class="layer-detail">Raw Data + Metadata</div>
+                    </div>
+                    
+                    <div class="arrow-down"></div>
+                    
+                    <div class="layer-box silver-layer">
+                        <div class="layer-name">🥈 SILVER</div>
+                        <div class="layer-detail">Validated + Enriched</div>
+                    </div>
+                    
+                    <div class="arrow-down"></div>
+                    
+                    <div class="layer-box gold-layer">
+                        <div class="layer-name">🥇 GOLD</div>
+                        <div class="layer-detail">Aggregated + Optimized</div>
+                    </div>
+                </div>
+                <div class="data-source">
+                    Three-layer data transformation pipeline
+                </div>
             </div>
         </div>
     </div>

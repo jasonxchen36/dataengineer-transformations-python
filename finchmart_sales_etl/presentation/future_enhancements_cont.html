@@ -3,162 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Enhancements (Part 2)</title>
+    <title>Future Enhancements Enable Real-Time Analytics (Part 2)</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .slide-container {
             width: 1280px;
             min-height: 720px;
-            background: #FFFFFF;
-            padding: 40px 60px;
-            position: relative;
+            background: #F2F9FC;
+            margin: 0 auto;
+            padding: 0;
         }
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        
+        .header-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #12377A 0%, #3D8BC1 50%, #6BAFD3 100%);
             width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(160, 255, 31, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(160, 255, 31, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
         }
-        .content {
-            position: relative;
-            z-index: 2;
+        
+        .content-area {
+            padding: 40px 80px;
         }
-        .title {
-            font-size: 40px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 40px;
-            border-left: 8px solid #6B2D9E;
-            padding-left: 20px;
+        
+        .slide-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
-        .enhancements-grid {
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 12px;
+            margin-top: 20px;
+        }
+        
+        .content-text {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3D8BC1;
+        }
+        
+        .metric-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-bottom: 30px;
+            gap: 24px;
+            margin-bottom: 24px;
         }
-        .enhancement-block {
-            background: #F8F8F8;
-            padding: 25px 28px;
-            min-height: 160px;
-            display: flex;
-            flex-direction: column;
-            border-top: 6px solid #6B2D9E;
-        }
-        .enhancement-block:nth-child(even) {
-            border-top-color: #A0FF1F;
-        }
-        .enhancement-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .enhancement-number {
-            width: 50px;
-            height: 50px;
-            background: #6B2D9E;
-            color: white;
-            font-size: 26px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 18px;
-        }
-        .enhancement-block:nth-child(even) .enhancement-number {
-            background: #A0FF1F;
-            color: #1A1A2E;
-        }
-        .enhancement-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1A1A2E;
-            flex: 1;
-        }
-        .enhancement-description {
-            font-size: 17px;
-            color: #2D2D44;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .enhancement-tech {
+        
+        .metric-card {
             background: white;
-            padding: 12px 18px;
-            font-size: 15px;
-            color: #2D2D44;
-            border-left: 4px solid #6B2D9E;
-            margin-top: auto;
+            padding: 24px;
+            border-left: 4px solid #6BAFD3;
         }
-        .enhancement-block:nth-child(even) .enhancement-tech {
-            border-left-color: #A0FF1F;
+        
+        .metric-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: #12377A;
+            line-height: 1;
+            margin-bottom: 8px;
         }
-        .tech-label {
-            font-weight: bold;
-            color: #6B2D9E;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .bottom-bar {
-            background: linear-gradient(90deg, #6B2D9E 0%, #A0FF1F 100%);
-            padding: 20px 30px;
-            text-align: center;
-            color: white;
-            font-size: 19px;
+        
+        .metric-label {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 18px;
             font-weight: 600;
+            color: #3D8BC1;
+            margin-bottom: 8px;
+        }
+        
+        .metric-desc {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.5;
+        }
+        
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .list-item {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .list-item:before {
+            content: "•";
+            color: #3D8BC1;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div class="slide-container">
-        <div class="grid-overlay"></div>
-        <div class="content">
-            <h1 class="title">Future Enhancements Enable Real-Time Analytics (Part 2)</h1>
+        <div class="header-bar"></div>
+        <div class="content-area">
+            <h1 class="slide-title">Future Enhancements Enable Real-Time Analytics (Part 2)</h1>
             
-            <div class="enhancements-grid">
-                <div class="enhancement-block">
-                    <div class="enhancement-header">
-                        <div class="enhancement-number">4</div>
-                        <div class="enhancement-title">Advanced Data Quality</div>
-                    </div>
-                    <div class="enhancement-description">
-                        Great Expectations framework for configurable validation rules. Automated alerting for data quality issues (null rates, duplicate rates, schema drift). Quarantine tables for bad data requiring manual review. Data profiling dashboards showing statistical summaries and distributions.
-                    </div>
-                    <div class="enhancement-tech">
-                        <div class="tech-label">Tech Stack:</div>
-                        Great Expectations, data profiling dashboards, automated alerting
-                    </div>
-                </div>
-                
-                <div class="enhancement-block">
-                    <div class="enhancement-header">
-                        <div class="enhancement-number">5</div>
-                        <div class="enhancement-title">Incremental Processing at Scale</div>
-                    </div>
-                    <div class="enhancement-description">
-                        Watermark-based processing for 100K+ transactions/day with sub-minute latency. Delta Lake MERGE for handling late-arriving data and corrections. Idempotent transformations ensure consistent results on reprocessing. Automatic backfill capabilities for historical data corrections.
-                    </div>
-                    <div class="enhancement-tech">
-                        <div class="tech-label">Tech Stack:</div>
-                        Delta Lake MERGE, watermark-based streaming, idempotent transformations
-                    </div>
-                </div>
+            <div class="info-box">
+                <div class="section-title">4. Advanced Data Quality</div>
+                <div class="content-text">Great Expectations for comprehensive data validation. Automated data quality reports and alerts.</div>
             </div>
             
-            <div class="bottom-bar">
-                Future roadmap completes the transformation to enterprise-level real-time analytics capabilities
+            <div class="info-box">
+                <div class="section-title">5. Incremental Processing at Scale</div>
+                <div class="content-text">Watermark-based incremental processing for 100K+ transactions/day. Change Data Capture (CDC) for real-time updates.</div>
             </div>
+            
         </div>
     </div>
 </body>

@@ -3,166 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Quality Framework</title>
+    <title>Data Quality Framework Validates 100% of Records</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .slide-container {
             width: 1280px;
             min-height: 720px;
-            background: #FFFFFF;
-            padding: 35px 60px;
-            position: relative;
+            background: #F2F9FC;
+            margin: 0 auto;
+            padding: 0;
         }
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        
+        .header-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #12377A 0%, #3D8BC1 50%, #6BAFD3 100%);
             width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(107, 45, 158, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(107, 45, 158, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
         }
-        .content {
-            position: relative;
-            z-index: 2;
+        
+        .content-area {
+            padding: 40px 80px;
         }
-        .header-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
+        
+        .slide-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
-        .title {
-            font-size: 40px;
-            font-weight: bold;
-            color: #1A1A2E;
-            flex: 1;
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 12px;
+            margin-top: 20px;
         }
-        .validation-badge {
-            background: #A0FF1F;
-            color: #1A1A2E;
-            padding: 18px 38px;
-            text-align: center;
-            border: 4px solid #6B2D9E;
-        }
-        .badge-number {
-            font-size: 64px;
-            font-weight: bold;
-            line-height: 1;
-        }
-        .badge-label {
+        
+        .content-text {
+            font-family: 'SF Pro', sans-serif;
             font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 5px;
-            font-weight: bold;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
         }
-        .checks-grid {
+        
+        .info-box {
+            background: white;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3D8BC1;
+        }
+        
+        .metric-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-            margin-bottom: 25px;
+            gap: 24px;
+            margin-bottom: 24px;
         }
-        .check-block {
-            background: #F8F8F8;
-            padding: 22px 20px;
-            min-height: 160px;
-            display: flex;
-            flex-direction: column;
-            border-top: 6px solid #6B2D9E;
+        
+        .metric-card {
+            background: white;
+            padding: 24px;
+            border-left: 4px solid #6BAFD3;
         }
-        .check-block:nth-child(even) {
-            border-top-color: #A0FF1F;
+        
+        .metric-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: #12377A;
+            line-height: 1;
+            margin-bottom: 8px;
         }
-        .check-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 10px;
-        }
-        .check-description {
+        
+        .metric-label {
+            font-family: 'SF Pro', sans-serif;
             font-size: 18px;
-            color: #2D2D44;
-            line-height: 1.5;
-            margin-bottom: 12px;
-            flex-grow: 1;
-        }
-        .check-result {
-            background: #1A1A2E;
-            color: #A0FF1F;
-            padding: 10px 15px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-        }
-        .continuation-indicator {
-            background: linear-gradient(90deg, #6B2D9E 0%, #A0FF1F 100%);
-            padding: 12px 25px;
-            text-align: center;
-            color: white;
-            font-size: 17px;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            color: #3D8BC1;
+            margin-bottom: 8px;
+        }
+        
+        .metric-desc {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.5;
+        }
+        
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .list-item {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .list-item:before {
+            content: "•";
+            color: #3D8BC1;
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <div class="slide-container">
-        <div class="grid-overlay"></div>
-        <div class="content">
-            <div class="header-section">
-                <h1 class="title">Data Quality Framework Validates 100% of Records</h1>
-                <div class="validation-badge">
-                    <div class="badge-number">100%</div>
-                    <div class="badge-label">Validated</div>
-                </div>
+        <div class="header-bar"></div>
+        <div class="content-area">
+            <h1 class="slide-title">Data Quality Framework Validates 100% of Records</h1>
+            
+            <div class="info-box">
+                <div class="section-title">1. Schema Validation</div>
+                <div class="content-text">StructType enforces data types at ingestion, rejecting malformed records before Bronze layer.</div>
             </div>
             
-            <div class="checks-grid">
-                <div class="check-block">
-                    <div class="check-title">Schema Validation</div>
-                    <div class="check-description">
-                        Explicit StructType schema enforces data types (StringType, IntegerType, TimestampType) at ingestion. Rejects malformed records before entering Bronze layer.
-                    </div>
-                    <div class="check-result">✓ Type safety, early error detection</div>
-                </div>
-                
-                <div class="check-block">
-                    <div class="check-title">Timestamp Validation</div>
-                    <div class="check-description">
-                        to_timestamp() with format string converts "MM/dd/yyyy HH:mm" to proper datetime. Invalid timestamps result in null values, caught by subsequent filter.
-                    </div>
-                    <div class="check-result">✓ All 600 records passed validation</div>
-                </div>
-                
-                <div class="check-block">
-                    <div class="check-title">Null Handling</div>
-                    <div class="check-description">
-                        coalesce() provides defaults: "Unknown" for payment_method, 1 for invalid quantities. Explicit null checks filter records missing critical fields.
-                    </div>
-                    <div class="check-result">✓ Zero null-related errors</div>
-                </div>
-                
-                <div class="check-block">
-                    <div class="check-title">Range Validation</div>
-                    <div class="check-description">
-                        when(col("quantity") > 0) ensures positive quantities. Price validation rejects negative or zero prices. Maintains data integrity for revenue calculations.
-                    </div>
-                    <div class="check-result">✓ Business rules enforced</div>
-                </div>
+            <div class="info-box">
+                <div class="section-title">2. Timestamp Validation</div>
+                <div class="content-text">to_timestamp() converts strings to datetime with all 600 records passing validation.</div>
             </div>
             
-            <div class="continuation-indicator">
-                CONTINUED: Deduplication, Referential Integrity, and Pipeline Metrics →
+            <div class="info-box">
+                <div class="section-title">3. Null Handling</div>
+                <div class="content-text">coalesce() provides defaults like 'Unknown' for payment_method, resulting in zero null-related errors.</div>
             </div>
+            
+            <div class="info-box">
+                <div class="section-title">4. Range Validation</div>
+                <div class="content-text">when() conditions ensure positive quantities and valid prices, enforcing business rules.</div>
+            </div>
+            
         </div>
     </div>
 </body>

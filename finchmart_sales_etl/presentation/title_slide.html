@@ -5,162 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinchMart Sales ETL Pipeline</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            overflow: hidden;
-        }
         .slide-container {
             width: 1280px;
             min-height: 720px;
-            background: #FFFFFF;
+            background: #F2F9FC;
+            margin: 0 auto;
             position: relative;
-            overflow: hidden;
+            padding: 0;
         }
-        .grid-overlay {
+        
+        .header-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #12377A 0%, #3D8BC1 50%, #6BAFD3 100%);
+            width: 100%;
+        }
+        
+        .main-content {
+            padding: 120px 80px;
+            height: calc(100% - 8px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .title-section {
+            margin-bottom: 60px;
+        }
+        
+        .primary-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 64px;
+            font-weight: 800;
+            color: #12377A;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+        
+        .secondary-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 32px;
+            font-weight: 300;
+            color: #3D8BC1;
+            line-height: 1.3;
+            margin-bottom: 40px;
+        }
+        
+        .tagline {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: #858481;
+            max-width: 700px;
+            line-height: 1.6;
+        }
+        
+        .year-corner {
+            position: absolute;
+            bottom: 80px;
+            right: 80px;
+            font-family: 'Inter', sans-serif;
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(18, 55, 122, 0.08);
+            line-height: 1;
+            pointer-events: none;
+        }
+        
+        .floating-elements {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(rgba(160, 255, 31, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(160, 255, 31, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
             pointer-events: none;
-            z-index: 1;
+            overflow: hidden;
         }
-        .accent-block-1 {
+        
+        .float-circle {
             position: absolute;
+            border-radius: 50%;
+            background: rgba(107, 175, 211, 0.06);
+        }
+        
+        .circle-1 {
             width: 120px;
             height: 120px;
-            background: #A0FF1F;
-            top: 50px;
-            right: 100px;
-            transform: rotate(45deg);
-            z-index: 2;
+            top: 15%;
+            right: 20%;
         }
-        .accent-block-2 {
-            position: absolute;
+        
+        .circle-2 {
             width: 80px;
             height: 80px;
-            background: #6B2D9E;
-            bottom: 80px;
-            left: 50px;
-            z-index: 2;
+            top: 60%;
+            right: 15%;
+            background: rgba(168, 213, 229, 0.08);
         }
-        .content-wrapper {
-            position: relative;
-            z-index: 3;
-            display: flex;
-            min-height: 720px;
+        
+        .circle-3 {
+            width: 60px;
+            height: 60px;
+            top: 35%;
+            right: 35%;
+            background: rgba(61, 139, 193, 0.05);
         }
-        .left-section {
-            width: 50%;
-            padding: 80px 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(160, 255, 31, 0.03) 0%, transparent 100%);
-        }
-        .right-section {
-            width: 50%;
-            padding: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, transparent 0%, rgba(107, 45, 158, 0.03) 100%);
-        }
-        .main-title {
-            font-size: 64px;
-            font-weight: bold;
-            color: #1A1A2E;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
-        .subtitle {
-            font-size: 32px;
-            color: #2D2D44;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-        .metadata {
-            font-size: 20px;
-            color: #2D2D44;
-            line-height: 1.8;
-        }
-        .metadata-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-        .metadata-icon {
-            width: 30px;
-            height: 30px;
-            background: #6B2D9E;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
+        
+        .bottom-meta {
+            position: absolute;
+            bottom: 40px;
+            left: 80px;
+            font-family: 'SF Pro', sans-serif;
+            color: #858481;
             font-size: 14px;
-        }
-        .accent-line {
-            width: 200px;
-            height: 6px;
-            background: linear-gradient(90deg, #A0FF1F 0%, #6B2D9E 100%);
-            margin-bottom: 40px;
-        }
-        .dashboard-preview {
-            width: 100%;
-            max-width: 550px;
-            border: 4px solid #1A1A2E;
-            box-shadow: 0 20px 60px rgba(26, 26, 46, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="slide-container">
-        <div class="grid-overlay"></div>
-        <div class="accent-block-1"></div>
-        <div class="accent-block-2"></div>
+        <!-- Header Bar -->
+        <div class="header-bar"></div>
         
-        <div class="content-wrapper">
-            <div class="left-section">
-                <div class="accent-line"></div>
-                <h1 class="main-title">FinchMart<br>Sales ETL<br>Pipeline</h1>
-                <h2 class="subtitle">Architectural Decisions</h2>
-                
-                <div class="metadata">
-                    <div class="metadata-item">
-                        <div class="metadata-icon"><i class="fas fa-user"></i></div>
-                        <span><strong>Author:</strong> Jason Chen</span>
-                    </div>
-                    <div class="metadata-item">
-                        <div class="metadata-icon"><i class="fas fa-calendar"></i></div>
-                        <span><strong>Date:</strong> November 2025</span>
-                    </div>
-                    <div class="metadata-item">
-                        <div class="metadata-icon"><i class="fas fa-code-branch"></i></div>
-                        <span><strong>Branch:</strong> finchmart-sales-etl</span>
-                    </div>
-                    <div class="metadata-item">
-                        <div class="metadata-icon"><i class="fas fa-check-circle"></i></div>
-                        <span><strong>Status:</strong> Production Ready</span>
-                    </div>
-                </div>
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="float-circle circle-1"></div>
+            <div class="float-circle circle-2"></div>
+            <div class="float-circle circle-3"></div>
+        </div>
+        
+        <!-- Year Background -->
+        <div class="year-corner">2025</div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="title-section">
+                <h1 class="primary-title">FinchMart Sales ETL Pipeline</h1>
+                <h2 class="secondary-title">Architectural Decision Document</h2>
+                <p class="tagline">
+                    Production-ready data engineering solution implementing medallion architecture for scalable, 
+                    high-performance sales analytics with comprehensive data quality framework and 96% completion score.
+                </p>
             </div>
-            
-            <div class="right-section">
-                <img src="/home/ubuntu/dataengineer-transformations-python/finchmart_sales_etl/powerbi/dashboard_mockup.png" 
-                     alt="Dashboard Preview" 
-                     class="dashboard-preview object-contain">
-            </div>
+        </div>
+        
+        <!-- Bottom Meta -->
+        <div class="bottom-meta">
+            Data Engineering Take-Home Project • November 2025
         </div>
     </div>
 </body>

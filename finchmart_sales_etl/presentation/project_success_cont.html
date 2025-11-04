@@ -6,118 +6,126 @@
     <title>Project Success: Key Achievements and Deliverables</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         .slide-container {
             width: 1280px;
             min-height: 720px;
-            background: #FFFFFF;
-            padding: 45px 60px;
-            position: relative;
+            background: #F2F9FC;
+            margin: 0 auto;
+            padding: 0;
         }
-        .grid-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
+        
+        .header-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #12377A 0%, #3D8BC1 50%, #6BAFD3 100%);
             width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(160, 255, 31, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(160, 255, 31, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
         }
-        .content {
-            position: relative;
-            z-index: 2;
+        
+        .content-area {
+            padding: 40px 80px;
         }
-        .title {
-            font-size: 40px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 40px;
-            border-left: 8px solid #6B2D9E;
-            padding-left: 20px;
+        
+        .slide-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 32px;
+            line-height: 1.2;
         }
-        .achievements-section {
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #12377A;
+            margin-bottom: 12px;
+            margin-top: 20px;
+        }
+        
+        .content-text {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3D8BC1;
+        }
+        
+        .metric-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 24px;
         }
-        .achievements-block {
-            background: linear-gradient(135deg, #F8F8F8 0%, #FFFFFF 100%);
-            padding: 30px 35px;
-            border-left: 8px solid #A0FF1F;
-            min-height: 300px;
+        
+        .metric-card {
+            background: white;
+            padding: 24px;
+            border-left: 4px solid #6BAFD3;
         }
-        .achievements-block:nth-child(2) {
-            border-left-color: #6B2D9E;
+        
+        .metric-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 44px;
+            font-weight: 800;
+            color: #12377A;
+            line-height: 1;
+            margin-bottom: 8px;
         }
-        .block-title {
-            font-size: 28px;
-            font-weight: bold;
-            color: #1A1A2E;
-            margin-bottom: 25px;
-        }
-        .achievement-item {
+        
+        .metric-label {
+            font-family: 'SF Pro', sans-serif;
             font-size: 18px;
-            color: #2D2D44;
-            margin-bottom: 18px;
-            padding-left: 25px;
-            position: relative;
+            font-weight: 600;
+            color: #3D8BC1;
+            margin-bottom: 8px;
+        }
+        
+        .metric-desc {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 15px;
+            color: #666666;
             line-height: 1.5;
         }
-        .achievement-item:before {
-            content: "✓";
+        
+        .content-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .list-item {
+            font-family: 'SF Pro', sans-serif;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .list-item:before {
+            content: "•";
+            color: #3D8BC1;
+            font-weight: bold;
+            font-size: 20px;
             position: absolute;
             left: 0;
-            color: #6B2D9E;
-            font-weight: bold;
-            font-size: 22px;
-        }
-        .bottom-bar {
-            background: linear-gradient(90deg, #6B2D9E 0%, #A0FF1F 100%);
-            padding: 20px 30px;
-            margin-top: 40px;
-            text-align: center;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="slide-container">
-        <div class="grid-overlay"></div>
-        <div class="content">
-            <h1 class="title">Project Success: Key Achievements and Deliverables</h1>
-            
-            <div class="achievements-section">
-                <div class="achievements-block">
-                    <div class="block-title">Key Achievements</div>
-                    <div class="achievement-item">Production-ready code with modular design and error handling</div>
-                    <div class="achievement-item">Scalable medallion architecture supporting 100K+ transactions/day</div>
-                    <div class="achievement-item">Comprehensive data quality framework validating 100% of records</div>
-                    <div class="achievement-item">Performance optimizations reducing query latency by 10x</div>
-                    <div class="achievement-item">Detailed documentation covering architecture and deployment</div>
-                </div>
-                
-                <div class="achievements-block">
-                    <div class="block-title">Deliverables Completed</div>
-                    <div class="achievement-item">3 Databricks notebooks (Bronze, Silver, Gold layers)</div>
-                    <div class="achievement-item">Power BI dashboard mockup and comprehensive documentation</div>
-                    <div class="achievement-item">Architectural decision document (this presentation)</div>
-                    <div class="achievement-item">Git repository with clear commit history and branching</div>
-                    <div class="achievement-item">CSV exports ready for Power BI import</div>
-                </div>
-            </div>
-            
-            <div class="bottom-bar">
-                All project requirements met with production-ready deliverables
-            </div>
+        <div class="header-bar"></div>
+        <div class="content-area">
+            <h1 class="slide-title">Project Success: Key Achievements and Deliverables</h1>
+            <div class="section-title">Key Achievements</div><ul class="content-list"><li class="list-item">Production-ready code with comprehensive error handling and logging</li><li class="list-item">Scalable architecture supporting 100K+ transactions/day</li><li class="list-item">Data quality framework validating 100% of records</li><li class="list-item">Performance optimizations achieving 10x latency reduction</li></ul><div class="section-title">Deliverables Completed</div><ul class="content-list"><li class="list-item">3 Databricks notebooks (Bronze, Silver, Gold layers)</li><li class="list-item">Power BI dashboard mockup and comprehensive documentation</li><li class="list-item">Architectural decision document (this presentation)</li><li class="list-item">Git repository with clean commit history</li></ul>
         </div>
     </div>
 </body>
