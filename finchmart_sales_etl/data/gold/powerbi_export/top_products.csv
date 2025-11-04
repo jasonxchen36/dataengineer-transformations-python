@@ -1,0 +1,6 @@
+transaction_date,product_id,product_name,product_category,total_revenue,total_quantity_sold,transaction_count,avg_price,revenue_rank,updated_at
+2025-02-12,P691,Coffee Maker,Home & Kitchen,5276.93,13,3,402.82,1,2025-11-03T19:58:28.033-05:00
+2025-02-12,P691,Jacket,Clothing,5276.93,13,3,402.82,2,2025-11-03T19:58:28.033-05:00
+2025-02-12,P786,Action Figure,Toys,4402.79,13,4,340.42,3,2025-11-03T19:58:28.033-05:00
+2025-02-12,P786,Mystery Thriller,Books,4402.79,13,4,340.42,4,2025-11-03T19:58:28.033-05:00
+2025-02-12,P786,T-Shirt,Clothing,4402.79,13,4,340.42,5,2025-11-03T19:58:28.033-05:00

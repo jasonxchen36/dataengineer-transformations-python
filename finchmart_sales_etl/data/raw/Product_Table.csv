@@ -1,0 +1,566 @@
+product_id,product_name,product_category,base_price
+P209,Blender,Home & Kitchen,223.82
+P691,Jacket,Clothing,287.98
+P728,Coffee Maker,Home & Kitchen,246.81
+P313,Cutlery Set,Home & Kitchen,456.34
+P128,T-Shirt,Clothing,86.99
+P658,Mystery Thriller,Books,342.78
+P594,Yoga Mat,Sports,376.59
+P927,Hoodie,Clothing,188.92
+P526,Running Shoes,Clothing,13.95
+P711,Action Figure,Toys,474.71
+P415,Business Book,Books,257.85
+P554,Jacket,Clothing,348.41
+P961,Dollhouse,Toys,362.5
+P404,Business Book,Books,236.37
+P280,Cycling Helmet,Sports,20.55
+P298,Wireless Headphones,Electronics,264.48
+P573,Board Game,Toys,467.39
+P145,Dumbbells,Sports,430.7
+P311,Dumbbells,Sports,334.31
+P127,Coffee Maker,Home & Kitchen,160.59
+P731,Coffee Maker,Home & Kitchen,355.64
+P451,Cycling Helmet,Sports,398.13
+P406,Laptop Stand,Electronics,21.34
+P351,Non-Stick Pan,Home & Kitchen,324.82
+P308,Running Shoes,Clothing,343.06
+P838,History Book,Books,332.8
+P497,Basketball,Sports,31.18
+P691,Coffee Maker,Home & Kitchen,24.93
+P298,Jacket,Clothing,133.86
+P574,Basketball,Sports,120.86
+P614,Basketball,Sports,473.48
+P273,Mystery Thriller,Books,375.74
+P237,Mystery Thriller,Books,22.97
+P365,Gaming Mouse,Electronics,433.38
+P967,Blender,Home & Kitchen,13.32
+P964,Cookbook,Books,150.54
+P751,Action Figure,Toys,412.87
+P934,Gaming Mouse,Electronics,164.62
+P232,Cycling Helmet,Sports,432.09
+P338,Board Game,Toys,208.53
+P684,Hoodie,Clothing,278.08
+P101,Non-Stick Pan,Home & Kitchen,137.31
+P320,Jeans,Clothing,206.4
+P285,Smartwatch,Electronics,250.87
+P384,T-Shirt,Clothing,399.19
+P184,Gaming Mouse,Electronics,346.45
+P803,Jeans,Clothing,487.92
+P360,Vacuum Cleaner,Home & Kitchen,219.92
+P304,Hoodie,Clothing,329.88
+P226,Blender,Home & Kitchen,399.64
+P204,Smartphone,Electronics,297.8
+P783,Basketball,Sports,177.0
+P504,Gaming Mouse,Electronics,176.92
+P420,History Book,Books,62.44
+P154,Cycling Helmet,Sports,120.39
+P257,Dumbbells,Sports,113.44
+P880,Lego Set,Toys,430.59
+P782,Laptop Stand,Electronics,34.64
+P951,Basketball,Sports,71.38
+P767,Smartphone,Electronics,88.05
+P379,Mystery Thriller,Books,490.5
+P169,Smartwatch,Electronics,377.61
+P473,T-Shirt,Clothing,291.53
+P724,Vacuum Cleaner,Home & Kitchen,358.46
+P609,Smartwatch,Electronics,272.48
+P211,Business Book,Books,311.21
+P508,Lego Set,Toys,374.21
+P399,Vacuum Cleaner,Home & Kitchen,328.87
+P829,Hoodie,Clothing,489.89
+P511,Lego Set,Toys,192.56
+P542,Hoodie,Clothing,223.52
+P949,Jacket,Clothing,172.57
+P761,Gaming Mouse,Electronics,311.4
+P528,Jeans,Clothing,31.88
+P588,Jacket,Clothing,447.59
+P608,Basketball,Sports,357.77
+P872,RC Car,Toys,248.31
+P786,Smartphone,Electronics,338.22
+P150,RC Car,Toys,88.11
+P456,Tennis Racket,Sports,228.85
+P847,Coffee Maker,Home & Kitchen,281.32
+P827,Blender,Home & Kitchen,79.19
+P312,Cycling Helmet,Sports,366.55
+P841,Hoodie,Clothing,126.06
+P922,Lego Set,Toys,368.93
+P524,Non-Stick Pan,Home & Kitchen,116.28
+P453,Science Fiction Novel,Books,213.46
+P637,Lego Set,Toys,336.9
+P892,T-Shirt,Clothing,37.35
+P571,Cookbook,Books,265.7
+P654,Coffee Maker,Home & Kitchen,37.69
+P133,Cookbook,Books,76.14
+P590,History Book,Books,235.64
+P170,Dumbbells,Sports,497.43
+P489,Jacket,Clothing,323.43
+P844,Basketball,Sports,374.2
+P488,Laptop Stand,Electronics,384.44
+P159,Action Figure,Toys,411.0
+P573,Jacket,Clothing,223.68
+P352,Coffee Maker,Home & Kitchen,154.5
+P229,History Book,Books,478.44
+P437,Non-Stick Pan,Home & Kitchen,117.3
+P383,Jacket,Clothing,21.95
+P207,Vacuum Cleaner,Home & Kitchen,130.73
+P986,Jeans,Clothing,384.47
+P495,Jacket,Clothing,183.9
+P280,Gaming Mouse,Electronics,476.64
+P158,Yoga Mat,Sports,225.94
+P934,Mystery Thriller,Books,279.16
+P606,Board Game,Toys,262.13
+P371,Cycling Helmet,Sports,51.22
+P316,Board Game,Toys,59.43
+P959,History Book,Books,422.35
+P646,Jeans,Clothing,406.1
+P375,Running Shoes,Clothing,120.69
+P315,Dollhouse,Toys,340.39
+P339,Smartwatch,Electronics,204.18
+P570,Business Book,Books,290.48
+P900,Cycling Helmet,Sports,439.4
+P154,Board Game,Toys,116.81
+P814,Running Shoes,Clothing,293.24
+P793,RC Car,Toys,326.24
+P730,Yoga Mat,Sports,448.2
+P964,Action Figure,Toys,486.52
+P489,Coffee Maker,Home & Kitchen,69.36
+P544,Blender,Home & Kitchen,27.65
+P849,Dollhouse,Toys,340.15
+P503,Cycling Helmet,Sports,63.09
+P500,Lego Set,Toys,444.5
+P689,Gaming Mouse,Electronics,340.94
+P151,Basketball,Sports,62.31
+P585,Jacket,Clothing,455.69
+P319,Lego Set,Toys,104.28
+P193,Gaming Mouse,Electronics,160.01
+P997,Jacket,Clothing,101.62
+P331,Smartphone,Electronics,448.77
+P927,Board Game,Toys,453.84
+P251,Running Shoes,Clothing,81.51
+P373,Dollhouse,Toys,296.23
+P563,Running Shoes,Clothing,324.5
+P122,Cycling Helmet,Sports,157.09
+P957,Dumbbells,Sports,282.76
+P387,Cookbook,Books,453.25
+P663,Laptop Stand,Electronics,419.66
+P105,Dumbbells,Sports,372.7
+P661,Vacuum Cleaner,Home & Kitchen,349.21
+P104,RC Car,Toys,231.78
+P794,Lego Set,Toys,337.2
+P924,Laptop Stand,Electronics,364.35
+P713,Smartphone,Electronics,168.05
+P339,Board Game,Toys,148.25
+P996,Basketball,Sports,225.3
+P561,Lego Set,Toys,125.49
+P812,Cycling Helmet,Sports,225.02
+P985,Jacket,Clothing,77.44
+P462,History Book,Books,152.9
+P533,Non-Stick Pan,Home & Kitchen,187.86
+P334,Coffee Maker,Home & Kitchen,200.97
+P915,Business Book,Books,397.06
+P868,Dollhouse,Toys,134.69
+P302,Action Figure,Toys,243.9
+P760,Non-Stick Pan,Home & Kitchen,438.15
+P305,Wireless Headphones,Electronics,41.28
+P899,Basketball,Sports,215.13
+P241,Mystery Thriller,Books,363.3
+P675,Jeans,Clothing,197.31
+P367,RC Car,Toys,265.24
+P161,Lego Set,Toys,134.71
+P617,Science Fiction Novel,Books,308.76
+P965,Tennis Racket,Sports,118.43
+P486,Tennis Racket,Sports,294.98
+P967,Jeans,Clothing,374.42
+P658,Hoodie,Clothing,341.64
+P368,Lego Set,Toys,197.01
+P165,Vacuum Cleaner,Home & Kitchen,486.8
+P415,Tennis Racket,Sports,498.49
+P607,Coffee Maker,Home & Kitchen,229.73
+P832,History Book,Books,130.47
+P885,Hoodie,Clothing,150.55
+P175,Smartphone,Electronics,438.42
+P426,T-Shirt,Clothing,329.89
+P303,Yoga Mat,Sports,356.83
+P622,Hoodie,Clothing,451.58
+P870,Hoodie,Clothing,216.11
+P148,Smartphone,Electronics,270.12
+P189,Dollhouse,Toys,374.92
+P729,Blender,Home & Kitchen,257.02
+P120,Jeans,Clothing,361.66
+P484,Cycling Helmet,Sports,464.41
+P652,Mystery Thriller,Books,258.81
+P427,Cycling Helmet,Sports,102.21
+P115,Laptop Stand,Electronics,365.08
+P971,Non-Stick Pan,Home & Kitchen,285.45
+P259,Dumbbells,Sports,384.9
+P858,History Book,Books,69.48
+P100,Basketball,Sports,109.81
+P669,Cookbook,Books,191.12
+P178,Cutlery Set,Home & Kitchen,78.61
+P128,Basketball,Sports,315.92
+P377,Smartwatch,Electronics,90.18
+P236,Basketball,Sports,345.1
+P787,Action Figure,Toys,127.6
+P775,Hoodie,Clothing,496.86
+P874,Cookbook,Books,263.74
+P801,Jeans,Clothing,226.03
+P802,Coffee Maker,Home & Kitchen,422.31
+P451,Business Book,Books,349.61
+P651,Running Shoes,Clothing,83.24
+P375,Gaming Mouse,Electronics,202.44
+P847,Dollhouse,Toys,223.4
+P148,Jeans,Clothing,300.63
+P439,RC Car,Toys,322.55
+P175,Cutlery Set,Home & Kitchen,50.61
+P462,Running Shoes,Clothing,70.0
+P605,Hoodie,Clothing,185.29
+P283,T-Shirt,Clothing,339.96
+P704,Hoodie,Clothing,145.13
+P527,Blender,Home & Kitchen,489.38
+P114,Jacket,Clothing,432.04
+P826,Cycling Helmet,Sports,166.15
+P724,Science Fiction Novel,Books,373.31
+P960,Non-Stick Pan,Home & Kitchen,167.62
+P159,Jeans,Clothing,279.95
+P166,T-Shirt,Clothing,417.44
+P961,Jeans,Clothing,230.58
+P246,T-Shirt,Clothing,431.24
+P689,Coffee Maker,Home & Kitchen,173.66
+P272,Hoodie,Clothing,182.55
+P907,Yoga Mat,Sports,155.06
+P105,Hoodie,Clothing,103.23
+P466,Dumbbells,Sports,499.69
+P471,Mystery Thriller,Books,421.2
+P764,Blender,Home & Kitchen,346.62
+P859,Blender,Home & Kitchen,429.55
+P452,Business Book,Books,146.49
+P955,RC Car,Toys,116.37
+P375,History Book,Books,257.49
+P569,Yoga Mat,Sports,58.54
+P254,Non-Stick Pan,Home & Kitchen,30.52
+P835,T-Shirt,Clothing,168.12
+P985,Business Book,Books,231.46
+P918,Basketball,Sports,32.56
+P520,Mystery Thriller,Books,66.37
+P395,Action Figure,Toys,43.23
+P116,Jacket,Clothing,139.74
+P562,Non-Stick Pan,Home & Kitchen,142.02
+P515,Cutlery Set,Home & Kitchen,26.8
+P112,Smartphone,Electronics,206.54
+P985,Basketball,Sports,131.08
+P102,Jacket,Clothing,315.57
+P873,Yoga Mat,Sports,83.89
+P898,Jacket,Clothing,423.88
+P545,Lego Set,Toys,361.43
+P786,Action Figure,Toys,197.3
+P693,Cutlery Set,Home & Kitchen,343.74
+P684,Cutlery Set,Home & Kitchen,354.47
+P586,Non-Stick Pan,Home & Kitchen,200.24
+P113,Action Figure,Toys,323.86
+P732,Dumbbells,Sports,403.99
+P611,Wireless Headphones,Electronics,205.24
+P109,RC Car,Toys,65.15
+P908,Jeans,Clothing,77.76
+P273,Jeans,Clothing,50.85
+P230,Non-Stick Pan,Home & Kitchen,43.44
+P156,Dumbbells,Sports,38.48
+P294,Science Fiction Novel,Books,115.38
+P492,Smartwatch,Electronics,486.42
+P367,Dumbbells,Sports,30.92
+P637,Gaming Mouse,Electronics,138.26
+P577,Mystery Thriller,Books,446.73
+P997,Yoga Mat,Sports,121.26
+P610,Smartwatch,Electronics,359.62
+P908,Lego Set,Toys,402.38
+P353,Vacuum Cleaner,Home & Kitchen,157.89
+P102,Gaming Mouse,Electronics,129.49
+P778,Business Book,Books,396.55
+P501,RC Car,Toys,15.39
+P901,Mystery Thriller,Books,180.64
+P681,Smartwatch,Electronics,282.32
+P361,Lego Set,Toys,33.26
+P575,Non-Stick Pan,Home & Kitchen,303.31
+P714,Board Game,Toys,442.49
+P303,Smartphone,Electronics,162.42
+P761,Science Fiction Novel,Books,151.87
+P367,Smartphone,Electronics,92.11
+P867,Gaming Mouse,Electronics,197.71
+P463,Cookbook,Books,270.11
+P176,Cookbook,Books,36.29
+P419,Action Figure,Toys,366.58
+P200,Tennis Racket,Sports,322.43
+P801,Science Fiction Novel,Books,124.41
+P915,Gaming Mouse,Electronics,72.43
+P522,Smartwatch,Electronics,166.96
+P378,Smartwatch,Electronics,347.15
+P515,Science Fiction Novel,Books,60.35
+P173,Blender,Home & Kitchen,151.34
+P705,Action Figure,Toys,377.67
+P778,Gaming Mouse,Electronics,142.9
+P294,Gaming Mouse,Electronics,257.64
+P869,Cookbook,Books,346.25
+P344,Jeans,Clothing,270.79
+P388,Gaming Mouse,Electronics,238.34
+P797,Jacket,Clothing,293.72
+P813,Gaming Mouse,Electronics,15.01
+P586,Running Shoes,Clothing,384.19
+P599,Mystery Thriller,Books,381.92
+P399,RC Car,Toys,413.44
+P502,Gaming Mouse,Electronics,459.07
+P955,Smartphone,Electronics,170.55
+P654,Business Book,Books,352.52
+P975,Jeans,Clothing,197.49
+P631,Tennis Racket,Sports,246.64
+P335,Lego Set,Toys,34.01
+P647,Dumbbells,Sports,311.47
+P913,Board Game,Toys,138.09
+P639,Mystery Thriller,Books,466.43
+P768,Yoga Mat,Sports,178.5
+P869,Jeans,Clothing,267.19
+P415,Jacket,Clothing,429.78
+P560,Tennis Racket,Sports,151.59
+P561,Dumbbells,Sports,448.43
+P660,Coffee Maker,Home & Kitchen,339.29
+P600,Lego Set,Toys,416.27
+P928,Gaming Mouse,Electronics,485.62
+P408,Dollhouse,Toys,142.2
+P527,Dumbbells,Sports,274.71
+P897,History Book,Books,191.09
+P533,Smartwatch,Electronics,88.57
+P776,Cutlery Set,Home & Kitchen,82.7
+P254,Lego Set,Toys,308.15
+P156,Cookbook,Books,24.33
+P401,Jacket,Clothing,411.0
+P256,Cycling Helmet,Sports,423.38
+P642,Wireless Headphones,Electronics,13.64
+P761,Jacket,Clothing,113.13
+P544,Mystery Thriller,Books,194.28
+P735,Laptop Stand,Electronics,374.98
+P629,Science Fiction Novel,Books,179.52
+P618,Mystery Thriller,Books,413.74
+P210,Blender,Home & Kitchen,32.16
+P481,History Book,Books,118.18
+P922,Wireless Headphones,Electronics,130.67
+P245,Gaming Mouse,Electronics,181.18
+P725,Business Book,Books,177.9
+P581,Running Shoes,Clothing,485.64
+P290,Laptop Stand,Electronics,37.78
+P279,Blender,Home & Kitchen,144.52
+P478,Laptop Stand,Electronics,351.8
+P235,Business Book,Books,182.91
+P115,Mystery Thriller,Books,495.6
+P179,Board Game,Toys,270.57
+P303,Lego Set,Toys,217.56
+P713,Jeans,Clothing,215.79
+P864,Running Shoes,Clothing,94.08
+P344,Cookbook,Books,137.53
+P475,Wireless Headphones,Electronics,125.67
+P456,Science Fiction Novel,Books,105.39
+P297,Mystery Thriller,Books,298.53
+P952,Mystery Thriller,Books,431.62
+P414,Action Figure,Toys,27.26
+P809,Jeans,Clothing,292.52
+P532,Business Book,Books,106.89
+P150,Running Shoes,Clothing,346.85
+P493,Smartwatch,Electronics,185.78
+P247,Hoodie,Clothing,224.26
+P813,Non-Stick Pan,Home & Kitchen,137.79
+P486,Blender,Home & Kitchen,93.5
+P639,Non-Stick Pan,Home & Kitchen,86.68
+P401,History Book,Books,121.42
+P592,Smartwatch,Electronics,63.47
+P980,RC Car,Toys,102.99
+P787,Gaming Mouse,Electronics,21.96
+P173,Business Book,Books,449.97
+P201,Smartphone,Electronics,155.06
+P647,Action Figure,Toys,494.99
+P480,RC Car,Toys,254.75
+P869,Vacuum Cleaner,Home & Kitchen,493.07
+P907,Running Shoes,Clothing,339.77
+P786,T-Shirt,Clothing,412.48
+P647,Laptop Stand,Electronics,257.81
+P316,Jacket,Clothing,59.12
+P943,T-Shirt,Clothing,390.36
+P262,Non-Stick Pan,Home & Kitchen,178.24
+P142,Business Book,Books,235.68
+P213,Dollhouse,Toys,292.24
+P683,Jeans,Clothing,79.05
+P757,Hoodie,Clothing,468.57
+P544,Basketball,Sports,156.1
+P143,Coffee Maker,Home & Kitchen,136.84
+P935,RC Car,Toys,171.9
+P718,T-Shirt,Clothing,71.72
+P583,Cutlery Set,Home & Kitchen,45.09
+P569,Wireless Headphones,Electronics,416.67
+P881,Jacket,Clothing,212.39
+P352,Cycling Helmet,Sports,395.0
+P385,Cutlery Set,Home & Kitchen,354.6
+P640,Running Shoes,Clothing,302.14
+P164,Non-Stick Pan,Home & Kitchen,150.6
+P754,Hoodie,Clothing,469.66
+P319,Non-Stick Pan,Home & Kitchen,16.83
+P546,Board Game,Toys,405.75
+P839,Cookbook,Books,64.87
+P836,Dumbbells,Sports,474.74
+P366,Running Shoes,Clothing,471.72
+P850,Science Fiction Novel,Books,56.3
+P726,Vacuum Cleaner,Home & Kitchen,432.57
+P776,Lego Set,Toys,255.26
+P182,Yoga Mat,Sports,497.04
+P414,Mystery Thriller,Books,28.59
+P275,Jacket,Clothing,342.09
+P297,Jacket,Clothing,456.11
+P138,RC Car,Toys,284.94
+P601,T-Shirt,Clothing,270.82
+P817,Dumbbells,Sports,414.67
+P499,Dumbbells,Sports,389.88
+P770,Basketball,Sports,247.25
+P493,Coffee Maker,Home & Kitchen,106.03
+P652,Basketball,Sports,78.01
+P594,Wireless Headphones,Electronics,476.66
+P911,Wireless Headphones,Electronics,459.49
+P474,Mystery Thriller,Books,46.7
+P904,Hoodie,Clothing,122.35
+P423,Non-Stick Pan,Home & Kitchen,416.07
+P430,Vacuum Cleaner,Home & Kitchen,452.55
+P440,Gaming Mouse,Electronics,208.23
+P566,Wireless Headphones,Electronics,180.08
+P409,Gaming Mouse,Electronics,481.89
+P468,Coffee Maker,Home & Kitchen,312.29
+P222,Tennis Racket,Sports,395.24
+P261,Yoga Mat,Sports,37.58
+P120,Cutlery Set,Home & Kitchen,196.74
+P515,Dumbbells,Sports,461.89
+P653,History Book,Books,129.92
+P916,Smartwatch,Electronics,68.72
+P448,History Book,Books,340.88
+P622,RC Car,Toys,128.34
+P424,Board Game,Toys,441.86
+P976,Gaming Mouse,Electronics,355.5
+P936,Lego Set,Toys,126.41
+P330,Jacket,Clothing,314.11
+P654,Tennis Racket,Sports,184.14
+P984,Wireless Headphones,Electronics,315.03
+P531,RC Car,Toys,29.94
+P559,Jacket,Clothing,320.31
+P764,Cookbook,Books,294.09
+P815,RC Car,Toys,158.98
+P950,Gaming Mouse,Electronics,332.0
+P208,Science Fiction Novel,Books,87.45
+P320,Gaming Mouse,Electronics,377.38
+P504,History Book,Books,405.31
+P464,Mystery Thriller,Books,54.39
+P755,Smartphone,Electronics,123.16
+P513,Jeans,Clothing,185.83
+P146,RC Car,Toys,342.21
+P347,Cookbook,Books,401.58
+P473,Gaming Mouse,Electronics,125.88
+P484,Smartwatch,Electronics,16.19
+P353,Smartphone,Electronics,352.47
+P739,T-Shirt,Clothing,11.18
+P260,Cookbook,Books,44.26
+P817,Business Book,Books,329.75
+P478,Vacuum Cleaner,Home & Kitchen,328.01
+P919,Wireless Headphones,Electronics,195.27
+P124,Board Game,Toys,277.85
+P947,Science Fiction Novel,Books,440.35
+P421,Yoga Mat,Sports,216.48
+P793,Wireless Headphones,Electronics,431.05
+P836,Jacket,Clothing,139.84
+P327,Jeans,Clothing,67.37
+P796,Laptop Stand,Electronics,211.87
+P858,T-Shirt,Clothing,224.33
+P484,Blender,Home & Kitchen,119.05
+P501,History Book,Books,325.91
+P177,Non-Stick Pan,Home & Kitchen,117.63
+P180,History Book,Books,173.65
+P734,Laptop Stand,Electronics,159.62
+P629,Hoodie,Clothing,367.35
+P507,Cookbook,Books,184.71
+P929,Tennis Racket,Sports,186.16
+P769,Cookbook,Books,252.14
+P506,Board Game,Toys,179.45
+P369,Action Figure,Toys,310.5
+P554,Non-Stick Pan,Home & Kitchen,46.16
+P780,Smartwatch,Electronics,130.13
+P802,Dollhouse,Toys,230.4
+P802,History Book,Books,115.19
+P379,Basketball,Sports,21.95
+P684,Business Book,Books,280.38
+P317,Basketball,Sports,268.57
+P559,Cookbook,Books,341.59
+P117,Cutlery Set,Home & Kitchen,276.18
+P850,Dollhouse,Toys,222.33
+P342,Dumbbells,Sports,282.37
+P999,Tennis Racket,Sports,135.9
+P655,Cutlery Set,Home & Kitchen,202.73
+P198,Tennis Racket,Sports,365.18
+P563,Action Figure,Toys,440.26
+P484,History Book,Books,210.89
+P241,Smartphone,Electronics,318.74
+P932,Blender,Home & Kitchen,225.76
+P944,Action Figure,Toys,257.67
+P413,Business Book,Books,162.63
+P805,Tennis Racket,Sports,224.05
+P175,T-Shirt,Clothing,326.18
+P134,Board Game,Toys,470.7
+P694,Cookbook,Books,68.24
+P558,Lego Set,Toys,13.04
+P134,Wireless Headphones,Electronics,265.39
+P260,Yoga Mat,Sports,73.07
+P386,Science Fiction Novel,Books,110.5
+P641,Coffee Maker,Home & Kitchen,297.56
+P615,Dumbbells,Sports,154.8
+P845,Running Shoes,Clothing,317.58
+P953,Dollhouse,Toys,424.63
+P100,Lego Set,Toys,151.17
+P405,Yoga Mat,Sports,157.71
+P805,Cookbook,Books,355.17
+P345,Smartwatch,Electronics,237.24
+P747,Gaming Mouse,Electronics,430.99
+P226,Laptop Stand,Electronics,466.84
+P356,Action Figure,Toys,230.5
+P755,Action Figure,Toys,358.24
+P597,Smartwatch,Electronics,77.77
+P772,Science Fiction Novel,Books,31.39
+P177,Hoodie,Clothing,288.92
+P205,Dumbbells,Sports,357.77
+P223,Mystery Thriller,Books,335.19
+P656,T-Shirt,Clothing,448.44
+P612,Coffee Maker,Home & Kitchen,291.79
+P991,Action Figure,Toys,144.43
+P621,Dollhouse,Toys,419.95
+P566,Non-Stick Pan,Home & Kitchen,352.55
+P211,Wireless Headphones,Electronics,435.43
+P465,Action Figure,Toys,126.95
+P505,Hoodie,Clothing,147.22
+P535,Science Fiction Novel,Books,166.48
+P333,Gaming Mouse,Electronics,395.17
+P812,Science Fiction Novel,Books,29.75
+P894,Mystery Thriller,Books,84.16
+P265,Tennis Racket,Sports,60.59
+P412,Cookbook,Books,253.7
+P499,Lego Set,Toys,230.15
+P762,Jeans,Clothing,49.68
+P813,Mystery Thriller,Books,372.95
+P780,RC Car,Toys,183.81
+P845,Blender,Home & Kitchen,83.26
+P361,Cookbook,Books,234.5
+P659,Cookbook,Books,386.22
+P786,Mystery Thriller,Books,167.94
+P790,Non-Stick Pan,Home & Kitchen,118.75
+P113,T-Shirt,Clothing,77.35
+P738,Board Game,Toys,463.14
+P375,Vacuum Cleaner,Home & Kitchen,170.03
+P679,RC Car,Toys,413.39
+P714,Science Fiction Novel,Books,43.0
+P415,Dollhouse,Toys,253.11
+P280,Lego Set,Toys,146.64
+P913,Business Book,Books,393.31
+P423,Board Game,Toys,100.04
+P821,T-Shirt,Clothing,61.13
+P732,Smartphone,Electronics,71.72
+P970,Basketball,Sports,451.52
+P626,Smartwatch,Electronics,154.48
+P579,Cycling Helmet,Sports,79.59
+P189,Non-Stick Pan,Home & Kitchen,63.79
