@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinchMart Sales ETL Pipeline</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            position: relative;
+            overflow: hidden;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(160, 255, 31, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 255, 31, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .accent-block-1 {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: #A0FF1F;
+            top: 50px;
+            right: 100px;
+            transform: rotate(45deg);
+            z-index: 2;
+        }
+        .accent-block-2 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: #6B2D9E;
+            bottom: 80px;
+            left: 50px;
+            z-index: 2;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            min-height: 720px;
+        }
+        .left-section {
+            width: 50%;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(160, 255, 31, 0.03) 0%, transparent 100%);
+        }
+        .right-section {
+            width: 50%;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, transparent 0%, rgba(107, 45, 158, 0.03) 100%);
+        }
+        .main-title {
+            font-size: 64px;
+            font-weight: bold;
+            color: #1A1A2E;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        .subtitle {
+            font-size: 32px;
+            color: #2D2D44;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        .metadata {
+            font-size: 20px;
+            color: #2D2D44;
+            line-height: 1.8;
+        }
+        .metadata-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .metadata-icon {
+            width: 30px;
+            height: 30px;
+            background: #6B2D9E;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+        .accent-line {
+            width: 200px;
+            height: 6px;
+            background: linear-gradient(90deg, #A0FF1F 0%, #6B2D9E 100%);
+            margin-bottom: 40px;
+        }
+        .dashboard-preview {
+            width: 100%;
+            max-width: 550px;
+            border: 4px solid #1A1A2E;
+            box-shadow: 0 20px 60px rgba(26, 26, 46, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="accent-block-1"></div>
+        <div class="accent-block-2"></div>
+        
+        <div class="content-wrapper">
+            <div class="left-section">
+                <div class="accent-line"></div>
+                <h1 class="main-title">FinchMart<br>Sales ETL<br>Pipeline</h1>
+                <h2 class="subtitle">Architectural Decisions</h2>
+                
+                <div class="metadata">
+                    <div class="metadata-item">
+                        <div class="metadata-icon"><i class="fas fa-user"></i></div>
+                        <span><strong>Author:</strong> Jason Chen</span>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-icon"><i class="fas fa-calendar"></i></div>
+                        <span><strong>Date:</strong> November 2025</span>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-icon"><i class="fas fa-code-branch"></i></div>
+                        <span><strong>Branch:</strong> finchmart-sales-etl</span>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-icon"><i class="fas fa-check-circle"></i></div>
+                        <span><strong>Status:</strong> Production Ready</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-section">
+                <img src="/home/ubuntu/dataengineer-transformations-python/finchmart_sales_etl/powerbi/dashboard_mockup.png" 
+                     alt="Dashboard Preview" 
+                     class="dashboard-preview object-contain">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

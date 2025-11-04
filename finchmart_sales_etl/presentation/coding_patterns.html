@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Patterns Part 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 50px 60px;
+            position: relative;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(160, 255, 31, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 255, 31, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            color: #1A1A2E;
+            margin-bottom: 35px;
+            border-left: 8px solid #6B2D9E;
+            padding-left: 20px;
+        }
+        .patterns-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .pattern-block {
+            background: #F8F8F8;
+            padding: 30px;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+        }
+        .pattern-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .pattern-number {
+            width: 55px;
+            height: 55px;
+            background: #A0FF1F;
+            color: #1A1A2E;
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 18px;
+        }
+        .pattern-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1A1A2E;
+            flex: 1;
+        }
+        .pattern-description {
+            font-size: 18px;
+            color: #2D2D44;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .pattern-benefit {
+            background: #1A1A2E;
+            color: #A0FF1F;
+            padding: 12px 18px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: auto;
+        }
+        .pattern-block:nth-child(1) .pattern-number {
+            background: #6B2D9E;
+            color: white;
+        }
+        .pattern-block:nth-child(3) .pattern-number {
+            background: #6B2D9E;
+            color: white;
+        }
+        .full-width-pattern {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #F8F8F8 0%, #FFFFFF 100%);
+        }
+        .continuation-note {
+            background: linear-gradient(90deg, #6B2D9E 0%, #A0FF1F 100%);
+            color: white;
+            padding: 18px 30px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content">
+            <h1 class="title">Coding Patterns Ensure Maintainability (Part 1)</h1>
+            
+            <div class="patterns-grid">
+                <div class="pattern-block">
+                    <div class="pattern-header">
+                        <div class="pattern-number">1</div>
+                        <div class="pattern-title">Modularity</div>
+                    </div>
+                    <div class="pattern-description">
+                        Separate functions for bronze_layer_ingestion(), silver_layer_transformation(), and gold_layer_aggregation() provide clear separation of concerns. Each layer is independently testable and reusable across different pipelines.
+                    </div>
+                    <div class="pattern-benefit">✓ Easy testing, debugging, and maintenance</div>
+                </div>
+                
+                <div class="pattern-block">
+                    <div class="pattern-header">
+                        <div class="pattern-number">2</div>
+                        <div class="pattern-title">Explicit Schema</div>
+                    </div>
+                    <div class="pattern-description">
+                        StructType schemas enforce data types at ingestion (StringType, IntegerType, TimestampType). Type safety catches malformed data before processing, preventing runtime errors downstream.
+                    </div>
+                    <div class="pattern-benefit">✓ Early error detection and self-documenting code</div>
+                </div>
+                
+                <div class="pattern-block full-width-pattern">
+                    <div class="pattern-header">
+                        <div class="pattern-number">3</div>
+                        <div class="pattern-title">Data Lineage Tracking</div>
+                    </div>
+                    <div class="pattern-description">
+                        ingestion_timestamp and source_file columns added at Bronze layer enable tracing any record back to original CSV file and ingestion time. Critical for compliance, debugging, and incremental processing.
+                    </div>
+                    <div class="pattern-benefit">✓ Full traceability and audit trail</div>
+                </div>
+            </div>
+            
+            <div class="continuation-note">
+                Continued: Defensive Programming and Window Functions for Deduplication →
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Stack</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 50px 60px;
+            position: relative;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(160, 255, 31, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 255, 31, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            color: #1A1A2E;
+            margin-bottom: 35px;
+            border-left: 8px solid #6B2D9E;
+            padding-left: 20px;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+        .tech-block {
+            background: #F8F8F8;
+            padding: 25px 20px;
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+        }
+        .tech-header {
+            background: #1A1A2E;
+            color: #A0FF1F;
+            padding: 12px 15px;
+            margin: -25px -20px 20px -20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .tech-purpose {
+            font-size: 16px;
+            color: #6B2D9E;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .tech-justification {
+            font-size: 16px;
+            color: #2D2D44;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        .tech-alternatives {
+            font-size: 14px;
+            color: #2D2D44;
+            background: #FFFFFF;
+            padding: 10px 12px;
+            margin: 0 -20px -25px -20px;
+            border-top: 3px solid #A0FF1F;
+        }
+        .alternatives-label {
+            font-weight: bold;
+            color: #1A1A2E;
+            margin-bottom: 5px;
+        }
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            gap: 2px;
+            background: #2D2D44;
+            margin-top: 25px;
+        }
+        .table-header {
+            background: #6B2D9E;
+            color: #FFFFFF;
+            padding: 12px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .table-cell {
+            background: #F8F8F8;
+            padding: 12px 15px;
+            font-size: 15px;
+            color: #2D2D44;
+        }
+        .table-tech {
+            font-weight: bold;
+            color: #1A1A2E;
+        }
+        .highlight-metric {
+            color: #6B2D9E;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content">
+            <h1 class="title">Technology Stack Justified by Scalability</h1>
+            
+            <div class="tech-grid">
+                <div class="tech-block">
+                    <div class="tech-header">PySpark</div>
+                    <div class="tech-purpose">Distributed Processing</div>
+                    <div class="tech-justification">
+                        Handles current 600 transactions/day with capacity to scale to <span class="highlight-metric">100K+ transactions</span>. Industry-standard framework with mature ecosystem, extensive documentation, and native Delta Lake integration for ACID transactions and time travel.
+                    </div>
+                    <div class="tech-alternatives">
+                        <div class="alternatives-label">Alternatives Rejected:</div>
+                        Pandas (single-node), Dask (less mature), SQL-only (inflexible)
+                    </div>
+                </div>
+                
+                <div class="tech-block">
+                    <div class="tech-header">Delta Lake</div>
+                    <div class="tech-purpose">Data Reliability</div>
+                    <div class="tech-justification">
+                        ACID transaction guarantees prevent data corruption during concurrent writes. Time travel enables querying historical versions for auditing. Schema evolution supports adding columns without breaking queries. Automatic file management reduces operational overhead.
+                    </div>
+                    <div class="tech-alternatives">
+                        <div class="alternatives-label">Alternatives Rejected:</div>
+                        Plain Parquet (no ACID), Apache Iceberg (less mature), Apache Hudi (complex)
+                    </div>
+                </div>
+                
+                <div class="tech-block">
+                    <div class="tech-header">Python 3.11</div>
+                    <div class="tech-purpose">Pipeline Orchestration</div>
+                    <div class="tech-justification">
+                        Rich data engineering ecosystem (PySpark, Pandas, Matplotlib). Team expertise and readable syntax accelerate development. Extensive library support for data quality, testing, and monitoring. Seamless integration with Databricks and Airflow.
+                    </div>
+                    <div class="tech-alternatives">
+                        <div class="alternatives-label">Alternatives Rejected:</div>
+                        Scala (steeper learning curve), Java (verbose syntax), R (limited scalability)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison-table">
+                <div class="table-header">Technology</div>
+                <div class="table-header">Key Benefit</div>
+                <div class="table-header">Production Impact</div>
+                
+                <div class="table-cell table-tech">PySpark</div>
+                <div class="table-cell">Distributed processing at scale</div>
+                <div class="table-cell">Supports 100K+ transactions/day with horizontal scaling</div>
+                
+                <div class="table-cell table-tech">Delta Lake</div>
+                <div class="table-cell">ACID transactions + time travel</div>
+                <div class="table-cell">Zero data corruption, historical version auditing</div>
+                
+                <div class="table-cell table-tech">Python 3.11</div>
+                <div class="table-cell">Developer productivity + ecosystem</div>
+                <div class="table-cell">Faster development, extensive library support</div>
+                
+                <div class="table-cell table-tech">Parquet</div>
+                <div class="table-cell">Columnar storage efficiency</div>
+                <div class="table-cell">70% compression ratio, fast analytical queries</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

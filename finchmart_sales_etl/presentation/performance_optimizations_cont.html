@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Optimizations (continued)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 35px 60px;
+            position: relative;
+        }
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(160, 255, 31, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 255, 31, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        .title {
+            font-size: 40px;
+            font-weight: bold;
+            color: #1A1A2E;
+            margin-bottom: 25px;
+            border-left: 8px solid #6B2D9E;
+            padding-left: 20px;
+        }
+        .optimizations-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .optimization-block {
+            background: #F8F8F8;
+            padding: 22px 25px;
+            border-left: 8px solid #6B2D9E;
+            min-height: 130px;
+        }
+        .optimization-block:nth-child(even) {
+            border-left-color: #A0FF1F;
+        }
+        .optimization-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        .optimization-number {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1A1A2E;
+            background: #A0FF1F;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .optimization-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1A1A2E;
+            flex: 1;
+            padding-left: 18px;
+        }
+        .optimization-description {
+            font-size: 17px;
+            color: #2D2D44;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .optimization-metric {
+            font-size: 16px;
+            color: #6B2D9E;
+            font-weight: bold;
+            background: #FFFFFF;
+            padding: 10px 15px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .bottom-bar {
+            background: #1A1A2E;
+            color: #FFFFFF;
+            padding: 18px 30px;
+            font-size: 18px;
+            text-align: center;
+            border-top: 4px solid #A0FF1F;
+        }
+        .highlight {
+            color: #A0FF1F;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="grid-overlay"></div>
+        <div class="content">
+            <h1 class="title">Performance Optimizations (continued)</h1>
+            
+            <div class="optimizations-grid">
+                <div class="optimization-block">
+                    <div class="optimization-header">
+                        <div class="optimization-number">4</div>
+                        <div class="optimization-title">Pre-Aggregations</div>
+                    </div>
+                    <div class="optimization-description">
+                        Gold layer computes daily_sales, store_performance, top_products, customer_spending aggregations. Power BI queries read pre-aggregated data instead of scanning raw transactions, ensuring consistent calculations across all dashboard users. This approach eliminates redundant computation and reduces query complexity.
+                    </div>
+                    <div class="optimization-metric">⚡ Benefit: Dashboard refresh time reduced from 30+ seconds to under 5 seconds</div>
+                </div>
+                
+                <div class="optimization-block">
+                    <div class="optimization-header">
+                        <div class="optimization-number">5</div>
+                        <div class="optimization-title">Coalesce for Exports</div>
+                    </div>
+                    <div class="optimization-description">
+                        coalesce(1) combines partitioned output into single CSV file for Power BI import, simplifying data loading process for business users. Trade-off accepted: loses parallelism during write, but acceptable for small Gold layer datasets. Provides predictable file naming and eliminates need to merge multiple partition files.
+                    </div>
+                    <div class="optimization-metric">⚡ Benefit: Single file output, predictable naming, easier Power BI integration</div>
+                </div>
+            </div>
+            
+            <div class="bottom-bar">
+                Combined optimizations enable <span class="highlight">scalability to 100K+ transactions/day</span> with sub-second query response times and <span class="highlight">80% reduction in compute costs</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
