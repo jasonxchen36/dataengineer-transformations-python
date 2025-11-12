@@ -98,7 +98,6 @@ def test_should_maintain_all_data_it_reads(spark_session: SparkSession) -> None:
     assert expected_schema.issubset(actual_schema)
 
 
-@pytest.mark.skip
 def test_should_add_distance_column_with_calculated_distance(
     spark_session: SparkSession,
 ) -> None:
